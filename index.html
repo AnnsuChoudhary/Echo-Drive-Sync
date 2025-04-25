@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Vehicle Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Vehicle Dashboard</h1>
+    <img src="images/car-icon.png" width="2000px" alt="Car Icon">
+
+    <div id="Login">
+        <h2><a href='login.html' color="'white">Login</a></h2>
+        <p id="route-info"></p>
+    </div>
+    <div id="location">
+        <h2>GPS Location</h2>
+        <p>Latitude: <span id="latitude"></span>, Longitude: <span id="longitude"></span></p>
+    </div>
+
+    <div id="route-planner">
+        <h2>Route Planning</h2>
+        <input type="text" id="destination" placeholder="Enter destination">
+        <button onclick="getRoute()">Plan Route</button>
+        <p id="route-info"></p>
+    </div>
+
+    <div id="diagnostics">
+        <h2>Vehicle Diagnostics</h2>
+        <button onclick="getDiagnostics()">Check Status</button>
+        <p id="diagnostic-info"></p>
+    </div>
+
+    <div id="traffic-updates">
+        <h2>Live Traffic Updates</h2>
+        <button onclick="getTraffic()">Check Traffic</button>
+        <p id="traffic-info"></p>
+    </div>
+
+    <div id="chatbot">
+        <h2>Chatbot Assistant</h2>
+        <button onclick="sendMessage()"><a href="gpt.html">Let's Go</a></button>
+    </div>
+    
+    <script src="scripts.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>
